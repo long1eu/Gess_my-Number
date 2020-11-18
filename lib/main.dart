@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 import 'test.dart';
 
+// todo: format your code
 void main() {
   runApp(Guess());
 }
@@ -10,9 +11,13 @@ class Guess extends StatefulWidget {
   _GuessState createState() => _GuessState();
 }
 class _GuessState extends State<Guess> {
+  // todo: always specify types
   final guessedNumber = new TextEditingController();
+  // todo: always specify types
   final rng = new Random();
+  // todo: proper variable names(message)
   String display = ' ';
+  // todo: proper variable names
   String guess1 = ' ';
 
   void ourAns() {
@@ -24,10 +29,12 @@ class _GuessState extends State<Guess> {
       setState(() {
         display = 'Choose number between 1 and 100';
       });
+      // todo: move this at the end
       guessedNumber.clear();
-    }
+    } // todo; add else
     if (guess > numberRandom) {
       setState(() {
+        // todo: why parentheses
         display = ("Try a LOWER number!");
       });
       guessedNumber.clear();
